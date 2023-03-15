@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -52,6 +53,7 @@ public class Magic8Ball {
         } else {
             response = "8-BALL ERROR, Try again!";
         }
+        System.out.println();
         System.out.println("Your question was: " + userQuestion);
         System.out.println("Magic 8-Ball says: " + response);
 

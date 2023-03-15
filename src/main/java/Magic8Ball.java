@@ -6,27 +6,17 @@ import java.util.Scanner;
  */
 public class Magic8Ball {
 
-    // 1. Make a main method that includes all the steps below
     public static void main(String[] args) {
 
-
-        // 2. Get the user to enter a question for the magic 8-ball to answer
-        //    Scanner scanner = new Scanner(System.in);
-        //    String userQuestion = scanner.nextLine();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("The Magic 8 Ball knows all! Think of a question you would like answered.");
-        System.out.print("Now, enter a number from 0 to 15 to learn your future: ");
+        System.out.println("The Magic 8 Ball knows all! Think of a question you would like answered (Yes or No Questions Only Please).");
+        System.out.print("Ask your question:");
         String userQuestion = scanner.nextLine();
 
-
-        // 3. Make a variable and initialize it to a random number.
-        //    // Get random a number from: [0, 1, 2, 3]
-        //    int randNumber = new Random().nextInt(4);
         int randNumber = new Random().nextInt(16);
         String response = "";
 
-        // create if statements for the responses
         if (randNumber == 0) {
             response = "It is certain";
         } else if (randNumber == 1) {
@@ -59,9 +49,10 @@ public class Magic8Ball {
             response = "Most likely";
         } else if (randNumber == 15) {
             response = "Without a doubt";
-        } else if (randNumber >= 16) {
+        } else {
             response = "8-BALL ERROR, Try again!";
         }
+        System.out.println("Your question was: " + userQuestion);
         System.out.println("Magic 8-Ball says: " + response);
 
 
